@@ -42,11 +42,6 @@ enum APIParameterName: String {
     case results
 }
 
-enum APISecurityScheme: String {
-    case bearer = "Bearer"
-    case basic  = "Basic"
-}
-
 enum APIPath {
     
     static let arts         = "/svc/topstories/v2/arts"
