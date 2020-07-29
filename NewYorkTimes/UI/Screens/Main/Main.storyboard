@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gGI-uI-icE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="zXa-bd-kR3">
+            <objects>
+                <navigationController id="gGI-uI-icE" customClass="BaseNavigationController" customModule="NewYorkTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="36F-GN-kq4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EuR-bB-bju" kind="relationship" relationship="rootViewController" id="tJ5-DA-bhH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNp-Jz-gld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-867" y="45"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="H3j-ZU-qyo">
+            <objects>
+                <viewController id="EuR-bB-bju" customClass="RootViewController" customModule="NewYorkTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zoK-MH-RqN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eQK-QY-TqL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="FtL-gp-ZP5" kind="embed" id="QgC-4L-il3"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eQK-QY-TqL" firstAttribute="leading" secondItem="zoK-MH-RqN" secondAttribute="leading" id="ggG-Co-MpZ"/>
+                            <constraint firstAttribute="bottom" secondItem="eQK-QY-TqL" secondAttribute="bottom" id="r0D-QI-fE2"/>
+                            <constraint firstItem="eQK-QY-TqL" firstAttribute="top" secondItem="zoK-MH-RqN" secondAttribute="top" id="vGr-hY-b8w"/>
+                            <constraint firstAttribute="trailing" secondItem="eQK-QY-TqL" secondAttribute="trailing" id="zxu-Y7-EzS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NWV-br-TgP"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="f5S-Sw-8Kk"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNX-zW-obO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75" y="45"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="Pwi-1F-noZ">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationController" navigationBarHidden="YES" id="FtL-gp-ZP5" customClass="MainNavigationController" customModule="NewYorkTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dHv-ls-ZMy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VGO-it-Bjp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="774" y="45"/>
+        </scene>
+    </scenes>
+</document>
