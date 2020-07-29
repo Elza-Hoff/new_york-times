@@ -20,6 +20,8 @@ class ArticleObservableVM: NetworkStateProtocol, ArticlesUsecase {
     
     private var articles: BehaviorRelay<[ShortArticleData]> = BehaviorRelay(value: [])
     
+    weak var delegate: ObservableVMProtocol?
+    
     // MARK: - ArticlesUsecase
     
     lazy var articlesNetworkComponent: ArticleNetworkHandlerComponent = {
@@ -43,8 +45,10 @@ class ArticleObservableVM: NetworkStateProtocol, ArticlesUsecase {
         case (_, .success):
             break
         case (_, .finish(_)):
+            self.delegate?.didFinishRequest()
             break
-        case (_, .failure(let error, _ )):
+        case (_, .failure(let error, let request)):
+            self.delegate?.didFailRequest(with: error, type: request)
             print("Some error occured: \(error)")
             break
         default:
@@ -62,6 +66,10 @@ class ArticleObservableVM: NetworkStateProtocol, ArticlesUsecase {
         self.getArtArticles { (articles) in
             self.articles.accept(articles)
         }
+    }
+    
+    public func getArticles() -> BehaviorRelay<[ShortArticleData]> {
+        return self.articles
     }
     
 }

@@ -72,6 +72,10 @@
 		F18B789124D1B397001D6AB2 /* APIErrorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18B789024D1B397001D6AB2 /* APIErrorValidator.swift */; };
 		F18B789424D1B45A001D6AB2 /* ArticlesUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18B789324D1B45A001D6AB2 /* ArticlesUsecase.swift */; };
 		F18B789724D1B4F5001D6AB2 /* ArticleObservableVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18B789624D1B4F5001D6AB2 /* ArticleObservableVM.swift */; };
+		F18B789D24D1C0ED001D6AB2 /* NotificationToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18B789B24D1C0ED001D6AB2 /* NotificationToastView.swift */; };
+		F18B789E24D1C0ED001D6AB2 /* NotificationToastView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18B789C24D1C0ED001D6AB2 /* NotificationToastView.xib */; };
+		F18B78A024D1C2D2001D6AB2 /* ObservableVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18B789F24D1C2D2001D6AB2 /* ObservableVMProtocol.swift */; };
+		F18B78A224D1C3ED001D6AB2 /* NewsViewController+ObservableVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18B78A124D1C3ED001D6AB2 /* NewsViewController+ObservableVMProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +148,10 @@
 		F18B789024D1B397001D6AB2 /* APIErrorValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrorValidator.swift; sourceTree = "<group>"; };
 		F18B789324D1B45A001D6AB2 /* ArticlesUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesUsecase.swift; sourceTree = "<group>"; };
 		F18B789624D1B4F5001D6AB2 /* ArticleObservableVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleObservableVM.swift; sourceTree = "<group>"; };
+		F18B789B24D1C0ED001D6AB2 /* NotificationToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationToastView.swift; sourceTree = "<group>"; };
+		F18B789C24D1C0ED001D6AB2 /* NotificationToastView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationToastView.xib; sourceTree = "<group>"; };
+		F18B789F24D1C2D2001D6AB2 /* ObservableVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableVMProtocol.swift; sourceTree = "<group>"; };
+		F18B78A124D1C3ED001D6AB2 /* NewsViewController+ObservableVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController+ObservableVMProtocol.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +278,7 @@
 		F18B77FA24D15A7D001D6AB2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F18B789A24D1C0ED001D6AB2 /* NotificationToast */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -413,6 +422,7 @@
 				F18B783E24D1632B001D6AB2 /* CommonInitable.swift */,
 				F18B783D24D1632B001D6AB2 /* SceneProtocol.swift */,
 				F18B784124D1632B001D6AB2 /* StoryboardInstantiable.swift */,
+				F18B789F24D1C2D2001D6AB2 /* ObservableVMProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -519,6 +529,7 @@
 			isa = PBXGroup;
 			children = (
 				F18B786524D1897E001D6AB2 /* NewsViewController+UITableView.swift */,
+				F18B78A124D1C3ED001D6AB2 /* NewsViewController+ObservableVMProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -583,6 +594,15 @@
 				F18B789624D1B4F5001D6AB2 /* ArticleObservableVM.swift */,
 			);
 			path = ObservableViewModel;
+			sourceTree = "<group>";
+		};
+		F18B789A24D1C0ED001D6AB2 /* NotificationToast */ = {
+			isa = PBXGroup;
+			children = (
+				F18B789B24D1C0ED001D6AB2 /* NotificationToastView.swift */,
+				F18B789C24D1C0ED001D6AB2 /* NotificationToastView.xib */,
+			);
+			path = NotificationToast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -651,6 +671,7 @@
 				F18B785D24D16A48001D6AB2 /* ArticleTableViewCell.xib in Resources */,
 				F18B783924D15FEC001D6AB2 /* Main.storyboard in Resources */,
 				F18B785724D16859001D6AB2 /* Splash.storyboard in Resources */,
+				F18B789E24D1C0ED001D6AB2 /* NotificationToastView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,6 +710,8 @@
 				F18B788A24D1A99D001D6AB2 /* APIResponseValidator.swift in Sources */,
 				F18B787424D19D57001D6AB2 /* RechabilityManager.swift in Sources */,
 				F18B785124D165F1001D6AB2 /* AuthSessionData.swift in Sources */,
+				F18B789D24D1C0ED001D6AB2 /* NotificationToastView.swift in Sources */,
+				F18B78A024D1C2D2001D6AB2 /* ObservableVMProtocol.swift in Sources */,
 				F18B782D24D15EF9001D6AB2 /* CircleView.swift in Sources */,
 				F18B781A24D15D6C001D6AB2 /* UINavigationController+NavigationBarStyle.swift in Sources */,
 				F18B782424D15DBE001D6AB2 /* UIVIewController+IndicatorLoading.swift in Sources */,
@@ -709,6 +732,7 @@
 				F18B788224D1A5DE001D6AB2 /* APIClient+ServerTrust.swift in Sources */,
 				F18B787124D19CEB001D6AB2 /* APIErrorDescription.swift in Sources */,
 				F18B787A24D19EF4001D6AB2 /* ArticleEndpoint.swift in Sources */,
+				F18B78A224D1C3ED001D6AB2 /* NewsViewController+ObservableVMProtocol.swift in Sources */,
 				F18B784324D1632B001D6AB2 /* CommonInitable.swift in Sources */,
 				F18B784424D1632B001D6AB2 /* AppDelegateShareable.swift in Sources */,
 				F18B787E24D1A4A3001D6AB2 /* APIClient+Articles.swift in Sources */,

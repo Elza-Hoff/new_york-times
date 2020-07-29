@@ -13,7 +13,7 @@ class ArticleTableViewCell: UITableViewCell {
     //MARK: - Defaults
     
     private enum Defaults {
-        static let icon: UIImage? = UIImage(named: "photo.on.rectangle")
+        static let icon: UIImage? = UIImage(systemName: "photo.on.rectangle")
     }
     
     //MARK: - Properties
@@ -38,7 +38,7 @@ class ArticleTableViewCell: UITableViewCell {
     func configureCellWith(title: String, description: String, icon: UIImage?) {
         self.lblTitle.text = title
         self.lblDescription.text = description
-        self.ivIcon.image = icon
+        self.ivIcon.image = icon ?? Defaults.icon
     }
     
     private func refreshUI() {

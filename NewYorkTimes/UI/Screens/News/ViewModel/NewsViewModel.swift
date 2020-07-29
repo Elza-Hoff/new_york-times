@@ -13,18 +13,23 @@ import RxCocoa
 class NewsViewModel: NSObject {
     
     //MARK: - Properties
-            
-    private var articles: BehaviorRelay<[Article]> = BehaviorRelay(value: [])
-    
+                
     //MARK: - Initialization
-    
     
     //MARK: - Lifecycle
     
-    func getArticles() -> BehaviorRelay<[Article]> {
-        return self.articles
+    weak var observableDelegate: ObservableVMProtocol? {
+        didSet {
+            ArticleObservableVM.shared.delegate = observableDelegate
+        }
     }
     
-    func prepareBinders() {
+    func getArticles() -> BehaviorRelay<[ShortArticleData]> {
+        return ArticleObservableVM.shared.getArticles()
     }
+    
+    func fetchArticles() {
+        ArticleObservableVM.shared.fetchArticles()
+    }
+    
 }

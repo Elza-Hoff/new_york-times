@@ -1,0 +1,6 @@
+module SwiftEntryKitModality {
+  umbrella header "SwiftEntryKitModality-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -13,6 +13,10 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SwiftDate (5.1.0)
+  - SwiftEntryKit (1.2.3):
+    - QuickLayout (= 3.0.0)
+  - SwiftEntryKitModality (0.3.0):
+    - SwiftEntryKit (= 1.2.3)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
@@ -26,6 +30,7 @@ DEPENDENCIES:
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SwiftDate (~> 5.0)
+  - SwiftEntryKitModality
   - YYCategories
 
 SPEC REPOS:
@@ -40,6 +45,8 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - SwiftDate
+    - SwiftEntryKit
+    - SwiftEntryKitModality
     - YYCategories
 
 SPEC CHECKSUMS:
@@ -53,8 +60,10 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwiftDate: 6329e58969a2de31cea7f1ee1143b247693196e7
+  SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
+  SwiftEntryKitModality: dd52784f3748327d13fb92486b45e6b3060ec145
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: e21d51e4246ea49b6cfa2a97d70d830206be56d0
+PODFILE CHECKSUM: 561935329b2047a63c91b96f4faebd5ac9fe3c47
 
 COCOAPODS: 1.8.1

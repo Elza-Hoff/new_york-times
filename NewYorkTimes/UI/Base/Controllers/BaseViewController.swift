@@ -52,19 +52,19 @@ class BaseViewController: UIViewController {
 //MARK: - Notifications
 extension BaseViewController {
     
-//    func showToast(message: String, style: NotificationToastStyle = .default) {
-//        let notification = NotificationToastView()
-//        notification.title = message
-//        notification.configure(with: NotificationToastConfig.style(style))
-//        notification.show()
-//    }
-//
-//    func showInDevelopmnetToast() {
-//        let notification = NotificationToastView()
-//        notification.title = "In development"
-//        notification.configure(with: NotificationToastConfig.style(.default))
-//        notification.show()
-//    }
+    func showToast(message: String, style: NotificationToastStyle = .default) {
+        let notification = NotificationToastView()
+        notification.title = message
+        notification.configure(with: NotificationToastConfig.style(style))
+        notification.show()
+    }
+
+    func showInDevelopmnetToast() {
+        let notification = NotificationToastView()
+        notification.title = "In development"
+        notification.configure(with: NotificationToastConfig.style(.default))
+        notification.show()
+    }
 }
 
 //MARK: - UIStatusBarStyle

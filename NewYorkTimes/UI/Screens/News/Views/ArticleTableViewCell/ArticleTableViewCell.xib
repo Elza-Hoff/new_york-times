@@ -18,15 +18,16 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwV-DX-Szc" customClass="RoundedView" customModule="NewYorkTimes" customModuleProvider="target">
                         <rect key="frame" x="5" y="5" width="429" height="385"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iM-Oe-sPi">
-                                <rect key="frame" x="15" y="15" width="42" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iM-Oe-sPi">
+                                <rect key="frame" x="15" y="15" width="399" height="30"/>
                                 <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jpe-yh-v4K">
                                 <rect key="frame" x="15" y="53" width="399" height="216"/>
-                                <color key="tintColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.77761735430000001" green="0.80382112719999999" blue="0.84795556520000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lG-rV-hDv">
                                 <rect key="frame" x="15" y="277" width="399" height="93"/>
@@ -36,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.77761735430000001" green="0.80382112719999999" blue="0.84795556520000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Jpe-yh-v4K" firstAttribute="height" secondItem="XwV-DX-Szc" secondAttribute="height" multiplier="0.561039" id="0kH-Jx-3i6"/>
                             <constraint firstItem="0lG-rV-hDv" firstAttribute="top" secondItem="Jpe-yh-v4K" secondAttribute="bottom" constant="8" id="1s7-q9-XsE"/>
@@ -48,6 +49,7 @@
                             <constraint firstItem="2iM-Oe-sPi" firstAttribute="top" secondItem="XwV-DX-Szc" secondAttribute="top" constant="15" id="gl5-Zv-1yQ"/>
                             <constraint firstAttribute="trailing" secondItem="0lG-rV-hDv" secondAttribute="trailing" constant="15" id="pCs-WY-Nsc"/>
                             <constraint firstItem="2iM-Oe-sPi" firstAttribute="leading" secondItem="XwV-DX-Szc" secondAttribute="leading" constant="15" id="qKO-wk-zdy"/>
+                            <constraint firstAttribute="trailing" secondItem="2iM-Oe-sPi" secondAttribute="trailing" constant="15" id="vF0-6r-39y"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

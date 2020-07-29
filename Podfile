@@ -16,5 +16,6 @@ target 'NewYorkTimes' do
     pod 'SwiftDate', '~> 5.0'
     pod "KRProgressHUD"
     pod 'Alamofire', '4.8.2'
+    pod 'SwiftEntryKitModality'
     
 end

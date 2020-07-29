@@ -22,6 +22,7 @@ class NewsViewController: BaseViewController {
     
     lazy var viewModel: NewsViewModel = {
         let model = NewsViewModel()
+        model.observableDelegate = self
         return model
     }()
     
@@ -31,18 +32,26 @@ class NewsViewController: BaseViewController {
         super.viewDidLoad()
         self.registerCells()
         self.prepareTableView()
-//        APIClient.shared.getArtArticles { (response, error) in
-//        }
+        self.showHUD(type: .loading)
+        self.viewModel.fetchArticles()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.showNavBar()
+        self.hideBackButton()
         self.add(title: Defaults.title)
     }
     
     private func registerCells() {
         self.tableView.register(UINib(nibName: ArticleTableViewCell.nibName, bundle: nil), forCellReuseIdentifier: ArticleTableViewCell.identifier)
+    }
+    
+    //MARK: - Handlers
+    
+    @IBAction func didTouchRefreshButton(_ sender: Any) {
+        self.showHUD(type: .loading)
+        self.viewModel.fetchArticles()
     }
     
 }

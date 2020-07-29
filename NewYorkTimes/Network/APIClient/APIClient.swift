@@ -79,7 +79,6 @@ class APIClient {
     // MARK: - Getters
     
     var isLogged: Bool {
-//        return self.token != nil && self.refreshToken != nil
         return true
     }
     
@@ -87,27 +86,4 @@ class APIClient {
     
     init() { }
     
-    // MARK: - Lifecycle
-    
-//    func registerSession(handler: AuthSessionData) {
-//        print("[APIClient]: Register auth session with = \(handler)")
-//        AppDelegate.hasBeenDemoScreen = true
-//        self.token        = handler.accessToken
-//        self.refreshToken = handler.refreshToken
-//    }
-//
-//    func unregisterSession() {
-//        print("[APIClient]: Auth session data has been destroyed.")
-//        MGCacheManager.deleteAllCaches(beforeDate: NSNumber(value: NSDate().timeIntervalSince1970))
-//        Syncer.shared.clearData()
-//        APIClient.shared.sessionId = nil
-//        APIClient.shared.token = nil
-//    }
-    
-//    func refreshSession() {
-//        DispatchQueue.main.async {
-//            NotificationCenter.default.post(name: NSNotification.Name(AppNotification.forceLoginNotification), object: nil)
-//        }
-//    }
-
 }

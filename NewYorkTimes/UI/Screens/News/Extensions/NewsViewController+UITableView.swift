@@ -25,7 +25,7 @@ extension NewsViewController {
         self.viewModel.getArticles().bind(to: self.tableView.rx.items(cellIdentifier: ArticleTableViewCell.identifier,
                  cellType: ArticleTableViewCell.self)) {
                   row, article, cell in
-                    cell.configureCellWith(title: article.title, description: article.content, icon: article.photo != nil ? UIImage(data: article.photo!) : nil)
+                    cell.configureCellWith(title: article.title, description: article.abstract, icon: nil)
         }
         .disposed(by: self.disposeBag)
     }
@@ -44,7 +44,7 @@ extension NewsViewController: UITableViewDelegate {
 extension NewsViewController {
     
     fileprivate enum TableViewSizes {
-        static let aspectRatioArticleCell: CGFloat = 0.5
+        static let aspectRatioArticleCell: CGFloat = 0.9
     }
     
 }

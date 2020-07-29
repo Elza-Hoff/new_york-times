@@ -19,12 +19,38 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sf5-f8-cK4" customClass="RoundedButton" customModule="NewYorkTimes" customModuleProvider="target">
+                                <rect key="frame" x="20" y="802" width="374" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="DevanagariSangamMN-Bold" family="Devanagari Sangam MN" pointSize="17"/>
+                                <state key="normal" title="Refresh">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTouchRefreshButton:" destination="Naf-eh-7bz" eventType="touchUpInside" id="TZ7-Io-jKO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="0Z2-hB-xye" firstAttribute="bottom" secondItem="Sf5-f8-cK4" secondAttribute="bottom" constant="15" id="2Hf-j6-7ot"/>
                             <constraint firstItem="KNa-gF-oLM" firstAttribute="leading" secondItem="JnW-b1-nYD" secondAttribute="leading" id="Ama-uc-2C5"/>
+                            <constraint firstAttribute="trailing" secondItem="Sf5-f8-cK4" secondAttribute="trailing" constant="20" id="BjK-1b-tPp"/>
                             <constraint firstAttribute="bottom" secondItem="KNa-gF-oLM" secondAttribute="bottom" id="K1o-Rw-fiC"/>
                             <constraint firstAttribute="trailing" secondItem="KNa-gF-oLM" secondAttribute="trailing" id="KY2-Qs-zgh"/>
+                            <constraint firstItem="Sf5-f8-cK4" firstAttribute="height" secondItem="JnW-b1-nYD" secondAttribute="height" multiplier="0.05" id="UGZ-gy-oX7"/>
+                            <constraint firstItem="Sf5-f8-cK4" firstAttribute="leading" secondItem="JnW-b1-nYD" secondAttribute="leading" constant="20" id="qbI-pQ-mVm"/>
                             <constraint firstItem="KNa-gF-oLM" firstAttribute="top" secondItem="0Z2-hB-xye" secondAttribute="top" id="wYn-Qg-1f9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Z2-hB-xye"/>
