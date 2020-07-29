@@ -31,6 +31,8 @@ class NewsViewController: BaseViewController {
         super.viewDidLoad()
         self.registerCells()
         self.prepareTableView()
+//        APIClient.shared.getArtArticles { (response, error) in
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

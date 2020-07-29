@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Alamofire
+import Marshal
 
 class APIClient {
     
@@ -17,7 +19,7 @@ class APIClient {
         static let sessionIdKey     = "sessionId"
         static let refreshTokenKey  = "refreshToken"
         static let expiryDate       = "expiryDate"
-        static let customerInfo     = "customerInfo"
+        static let apiKey           = "juafAy6StLxVWZhlNVDGEGSACP3wkGHq"
     }
     
     // MARK: - Instance
@@ -26,7 +28,20 @@ class APIClient {
     
     // MARK: - Properties
     
+    let baseURL: URL = URL(string: APIConstants.apiURL)!
+    
+    lazy var manager: SessionManager = {
+        let manager: SessionManager = Alamofire.SessionManager(
+            configuration: sessionConfiguration,
+            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+        )
+        manager.adapter = APIClientAdapter()
+        return manager
+    }()
+    
     // MARK: - Setters
+    
+    var apiKey = "juafAy6StLxVWZhlNVDGEGSACP3wkGHq"
     
     var token: String? {
         set {
@@ -64,10 +79,9 @@ class APIClient {
     // MARK: - Getters
     
     var isLogged: Bool {
-        return true
 //        return self.token != nil && self.refreshToken != nil
+        return true
     }
-    
     
     // MARK: - Initialization
     
@@ -75,22 +89,25 @@ class APIClient {
     
     // MARK: - Lifecycle
     
-    func registerSession(handler: AuthSessionData) {
-        print("[APIClient]: Register auth session with = \(handler)")
-        self.token        = handler.accessToken
-        self.refreshToken = handler.refreshToken
-    }
+//    func registerSession(handler: AuthSessionData) {
+//        print("[APIClient]: Register auth session with = \(handler)")
+//        AppDelegate.hasBeenDemoScreen = true
+//        self.token        = handler.accessToken
+//        self.refreshToken = handler.refreshToken
+//    }
+//
+//    func unregisterSession() {
+//        print("[APIClient]: Auth session data has been destroyed.")
+//        MGCacheManager.deleteAllCaches(beforeDate: NSNumber(value: NSDate().timeIntervalSince1970))
+//        Syncer.shared.clearData()
+//        APIClient.shared.sessionId = nil
+//        APIClient.shared.token = nil
+//    }
     
-    func unregisterSession() {
-        print("[APIClient]: Auth session data has been destroyed.")
-        APIClient.shared.sessionId = nil
-        APIClient.shared.token = nil
-    }
-    
-    func refreshSession() {
+//    func refreshSession() {
 //        DispatchQueue.main.async {
 //            NotificationCenter.default.post(name: NSNotification.Name(AppNotification.forceLoginNotification), object: nil)
 //        }
-    }
+//    }
 
 }
